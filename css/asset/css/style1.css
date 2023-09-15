@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;500&family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+body{
+  font-family:"궁서체","맑은고딕";
+  font-size:14px;
+  line-height: 1.2;
+ font: 14px/1.4 "Noto Sans KR", "sans-serif";
+  color: #333;
+
+  -webkit-text-size-adjust: none;
+  /* ios의 텍스트 방향 전환시 진하게 되는 현상 방지*/
+}
+a:link,
+a:visited{color:#333; text-decoration:none;}
+a:hover{color:#f00; text-decoration:none}
+
+.page-title{
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  background-color: #ccc;
+  height: 80px;
+}
