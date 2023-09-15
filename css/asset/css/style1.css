@@ -1,0 +1,11 @@
+body{
+  font-family:"궁서체","맑은고딕";
+  font-size:14px;
+  color: #333;
+  -webkit-text-size-adjust: none;
+  /* ios의 텍스트 방향 전환시 진하게 되는 현상 방지*/
+line-height: 1.2;
+}
+a:link,
+a:visited{color:#333; text-decoration:none;}
+a:hover{color:#f00; text-decoration:none}
