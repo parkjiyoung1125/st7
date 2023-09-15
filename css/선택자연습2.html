@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자연습2</title>
+  <style>
+    body{
+      font-size: 14px;
+      color:#300;
+      font-family: "나눔","궁서체";
+    }
+    .title{
+font-weight: bold;
+font-size: 24px;
+color:#800080
+    }
+    .title a{
+      color:#000;
+      text-decoration: none;
+    }
+    .title a:hover{
+      color:purple;
+      text-decoration: underline;
+      background-color: rgba(0,0,255,0.5);
+      padding: 0.5rem 1rem;
+    }
+    .box{
+      font-size: 13px;
+      color:#000;
+      /* margin:2rem; em은 부모의 글자 크기 여백, rem은 body의 글자 크기 여백 */
+      margin:2rem;
+      background-color: #ccc;
+      line-height: 2;
+    }
+    #section2 .box:nth-child(2){
+
+      font-family:"궁서체";
+      color:#00f
+    }
+  #category .position .xans-record-:first-child a{
+    color:#f00;
+    font-weight: bold;
+  }
+  #category .position .xans-record-:nth-child(3) a{
+   background-color: rgba(255,0,0,0.5);
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header></header>
+    <div class="main">
+<div id="section1" class="container">
+  <div class="inner">
+  <div class="title"></div>
+  <div class="desc">
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  </div>
+</div>
+<div id="section2" class="container"></div>
+<div class="inner">
+  <div class="title"></div>
+  <div class="desc">
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  </div>
+</div>
+</div>
+<!-- #section$.container*2>.inner>(.title>{제목})+.desc>.box*2>lorem6 -->
+<div id="section1" class="container">
+  <div class="inner">
+    <div class="title"><a href="">제목</a></div>
+    <div class="desc">
+      <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, natus asperiores quae libero dolores odit deleniti ducimus quos esse itaque ex soluta beatae amet culpa, officiis ab magnam, cumque saepe?
+      Et dignissimos facilis, suscipit veritatis nostrum ipsam deleniti id soluta temporibus, labore libero reprehenderit aliquam? Quos quo commodi doloribus. Sint iste voluptas magni ab ea, quos distinctio impedit eum expedita. Lorem ipsum dolor sit amet consectetur.</div>
+      <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi, nulla incidunt blanditiis accusantium inventore itaque eos vitae in illo nemo, voluptate recusandae quos repellat corrupti et non quisquam at?
+      Harum nisi quasi modi temporibus quos, quis quas doloribus esse libero eveniet ut dolorum quae ipsum ab cumque aperiam voluptate fuga ad porro nobis tenetur! Atque delectus in vel error? Aut minima suscipit voluptatem nesciunt sint.</div>
+    </div>
+  </div>
+</div>
+<div id="section2" class="container">
+  <div class="inner">
+    <div class="title">제목</div>
+    <div class="desc">
+      <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+      <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsum, culpa qui inventore quo eaque beatae voluptatibus nulla nemo repudiandae molestias illum, deleniti doloribus deserunt ad, at eligendi? Deserunt, voluptates?
+      Voluptates a, blanditiis ullam iure veritatis ducimus eum exercitationem ipsum alias laborum ex aut voluptatem dolore rerum! Sunt, laudantium blanditiis temporibus excepturi distinctio maiores voluptates totam tempora, suscipit ipsa tenetur. Lorem ipsum dolor sit amet consectetur.</div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa perferendis cumque ex magnam fuga eveniet aut doloremque! Perspiciatis error commodi fuga odit esse. Iusto, nemo rerum blanditiis neque pariatur voluptas.
+      Rerum, autem architecto tempore sit consequatur dolores consectetur fugit quos aliquam ipsa! Fugit soluta qui quis velit dignissimos amet libero, esse neque repellendus ab iste necessitatibus adipisci magnam, inventore aliquid. Ea nam natus quae iste id.</div>
+    </div> 
+  </div>
+</div>
+    <footer></footer>
+  </div>
+</body>
+</html>
