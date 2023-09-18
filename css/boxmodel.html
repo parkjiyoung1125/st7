@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel</title>
+  <!-- 외부의 css파일 불러올 때 -->
+  <link rel="stylesheet" href="asset/css/style1.css">
+  <style>
+/* .box{border-color: #000;
+border-style: solid;
+border-width: 1px;} */
+.box{border: #000 dotted 10px;
+border-top-color: #f00;
+background-colbor: #ccc;
+padding: 10px 20px 30px 40px;
+margin: 50px;
+}
+.box:nth-child(2)
+{padding: 50px;
+background-color: #666;}
+.box:nth-of-type(2){
+  padding: 10px 20px 30px;
+  background-color: #f00;
+
+}
+  </style>
+</head>
+<!-- 태그의 인라인으로 css적용하면 우선순위 값이 높아져서 분홍색으로 나옴 -->
+<body>
+  <h1 class="page-title">웹폰트사용</h1>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cum atque iure laboriosam ullam nam necessitatibus aliquam aliquid rerum, numquam placeat nesciunt est enim! Magni nemo dolor nobis ab facere!</div>
+  <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo animi tempora, similique asperiores sunt, perferendis repudiandae earum aliquam, enim officiis quod illum eius reprehenderit voluptatibus quisquam eligendi dolorem unde voluptatum?</div>
+  <ul>
+    <li><a href="">text1</a></li>
+    <li><a href="">text2</a></li>
+    <li><a href="">text3</a></li>
+    <li><a href="">text4</a></li>
+  </ul>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam non, iste dolor eum harum corrupti culpa animi quas eaque, delectus illum rerum magnam id, placeat nam obcaecati quis modi distinctio?</div>
+</body>
+</html>
