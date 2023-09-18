@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
-font-family: 'Nanum Gothic', sans-serif;
+/* font-family: 'Nanum Gothic', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
 *{margin: 0; padding: 0;}
 body{
   font-family: Nanum Gothic;
@@ -9,7 +11,7 @@ body{
    -webkit-text-size-adjust:none;
 }
 header{
-  width: auto;
+  /* width: auto; */
   min-height: 50px;
   padding:2rem;
   background-color: #ccc;
@@ -18,6 +20,25 @@ header{
 .page-title{
   width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
+  /* margin: 50px auto; */
   background-color: #f00;
+  font-family: 'Dancing Script', cursive;
+  font-size: 700;
+  color: #000;
 }
+
+.container{}
+
+section{
+ background-color: #efefef;
+ margin-top: 50px;
+ /* min-height: 100px; */
+ height: 100px;
+ /* width: 50vw; */
+ width: 300px;
+ margin: 50px auto;
+}
+#section1{overflow: auto;}
+#section2{overflow: hidden;}
+#section3{overflow: scroll;}
