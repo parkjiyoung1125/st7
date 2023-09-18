@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodle3-계산법</title>
+  <style>
+    *{margin:0; padding:0;}
+    
+.box{
+  width: 400px;
+  height: 300px;
+  background-color: #333;
+  margin: 50px auto;
+  color: #fff;
+  padding: 50px;
+  border: 10px solid #f86;
+}
+.box1{box-sizing: content-box;}
+.box2{
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box box1">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis recusandae magni odio incidunt qui ullam assumenda, cupiditate et animi nesciunt repellat earum deleniti, dignissimos eos nobis! Quis, quae laudantium?</div>
+      <div>Labore quo harum blanditiis? Molestias eos eligendi perferendis ducimus nihil voluptas, reiciendis aspernatur beatae. Velit pariatur vel amet maxime fugiat explicabo possimus aliquid? Atque ratione tempore fuga aspernatur perferendis! Excepturi.</div>
+    </div>
+    <div class="box box2">
+      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas facilis id repellendus, doloremque aut quidem aliquid debitis qui impedit, error delectus nam neque unde! Repellat blanditiis deleniti magni voluptate.</div>
+      <div>Adipisci tenetur nemo eos dolorum commodi quas fugit consectetur veritatis atque nisi perferendis impedit, at voluptatibus quaerat eligendi nostrum labore aliquam doloribus minima ad laudantium totam officia, non possimus. Repudiandae?</div>
+    </div>
+  </div>
+</body>
+</html>
