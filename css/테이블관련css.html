@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table관련css</title>
+  <style>
+
+    *{margin: 0; padding: 0;}
+
+    .container{margin: 50px;}
+
+    table,tr,td,th{
+      box-sizing: border-box;
+    }
+
+    .sample{
+      border: 1px solid #000;
+    border-top: 10px solid #f86;
+  width: 500px;
+box-sizing: border-box;
+border-collapse: collapse;
+table-layout: fixed;
+width: 100%;}
+
+.sample tr:nth-child(1) th {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+}
+
+.sample tr:nth-child(1) td{vertical-align: middle;}
+.sample tr:nth-child(2) td{vertical-align: top;}
+.sample tr:nth-child(3) td{vertical-align: middle;}
+.sample tr:nth-child(4) td{vertical-align: bottom;}
+
+
+
+.sample tr:nth-child(even) td{
+  background-color: #efefef;
+}
+
+.sample tr:nth-child(odd) td{
+  background-color: #fff;
+}
+
+.sample tr:hover td{
+  background-color: #68f;
+}
+  
+    .sample th,
+    .sample td{
+      border: 1px solid #000;
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+
+    .sample th:nth-child(1){
+      width: 13em;
+    }
+
+    .sample th:nth-child(3){
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <!-- table.sample>tr>th*3>{title$}^tr -->
+  <table class="sample">
+<tr>
+  <th>title1</th>
+  <th>title2</th>
+  <th>title3</th>
+</tr>
+<tr>
+  <td>가나다 라마바 아자차</td>
+  <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed quam possimus voluptates similique facilis autem deleniti repudiandae illum corrupti exercitationem nam quis quasi quo, atque at culpa incidunt error?
+  Cumque asperiores esse nulla, fugiat labore rem culpa. Laborum quis temporibus cumque obcaecati ipsam hic quae adipisci. Quidem excepturi, minima odio provident nam debitis quis saepe dolorem cum possimus? Molestiae.</td>
+  <td>Voluptas, deleniti!</td>
+</tr>
+<tr>
+  <td>abc def ghi</td>
+  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt non nihil eum, nisi facere aut perspiciatis, in dolores tenetur tempora fugiat molestiae odit provident repellendus officia adipisci accusamus ad nobis?
+  Perferendis quae fuga, ullam nihil, vel sed nemo repellat et impedit esse illum veritatis culpa repudiandae incidunt. Corporis recusandae ea similique. Reprehenderit, non nisi laudantium hic debitis iusto ad itaque?</td>
+  <td>Aliquid, ipsam!</td>
+</tr>
+<tr>
+  <td>Lorem, ipsum.</td>
+  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae natus voluptate illo iure, tempore eligendi iste nisi eaque quas doloremque tenetur ullam odit eos molestias alias dolorum harum pariatur!
+  Cumque, velit? Provident, autem veritatis inventore magnam magni facilis reiciendis tempore temporibus asperiores, rerum suscipit quos praesentium quo ab adipisci eligendi enim ducimus labore placeat sapiente minus commodi maiores harum.</td>
+  <td>Quas, sunt.</td>
+</tr>
+
+
+  </table>
+</div>  
+</body>
+</html>

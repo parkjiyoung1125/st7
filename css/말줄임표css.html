@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>말줄임표 관련 css</title>
+<style>
+  .sample{
+    width: 400px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    border:1px solid #000;
+  }
+
+  .box{
+    padding: 30px;
+    background-color: #ccc;
+  }
+
+  .box p{
+    /*white-space: normal;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #f68;
+    /*height: 150px;*/
+    margin-bottom: 50px;
+  }
+  .sample:nth-of-type(2).box p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quia ipsam ipsa recusandae dolore adipisci? Cupiditate libero ad quasi id placeat quo consequatur ipsam aperiam itaque, vel quibusdam architecto illum?</span><span>Inventore quis temporibus doloremque error autem omnis, eum dolorem perspiciatis accusamus numquam dolores veritatis, necessitatibus aliquid incidunt delectus amet est, iste eaque mollitia ratione. Eum aut quis earum eius magnam?</span></p>
+      <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, iure non. Beatae molestias numquam ab, nihil dolorem perferendis amet soluta minima! Perferendis magnam recusandae nesciunt neque impedit voluptates vitae nulla!</span><span>Magni soluta dolorem excepturi libero dolorum fugiat magnam ipsum. Quidem consectetur cum dignissimos molestias laborum, illum illo provident atque temporibus aliquam sint sunt maiores veritatis, tempore qui magni, autem quam!</span></p>
+    </div>
+  </div>
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sit expedita. Voluptatibus sed ab maiores ipsum consequuntur debitis veritatis reprehenderit rem possimus minima quia, assumenda sint harum iure culpa cumque!</span><span>Architecto odit suscipit quo inventore, iste perferendis consequuntur, voluptas dolore quidem velit ab cum numquam voluptatibus beatae. Eligendi sit, impedit illum earum sequi repudiandae. Ducimus nisi distinctio neque voluptate non?</span></p>
+      <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, culpa doloribus? Laborum quo laboriosam, magni, possimus quasi nisi, deleniti hic sequi excepturi maiores aliquam reiciendis veritatis veniam illum dolor quas!</span><span>Sit ratione expedita, sunt asperiores fugiat eum eaque, maiores ducimus esse minus labore beatae illum facere illo voluptatem error soluta sequi fugit eius aliquid, corporis incidunt aspernatur aliquam omnis! Earum.</span></p>
+    </div>
+  </div>
+  <div class="sample2">
+    <div class="content-wrap">
+      <p>국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 모든 국민은 직업선택의 자유를 가진다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe exercitationem qui, repudiandae, nam obcaecati fugit voluptate accusamus non esse, assumenda dolores enim?</p>
+    </div>
+  </div>
+  <style>
+    .sample2{
+      width: 80%;
+      margin: auto;
+    }
+    .sample2 p{
+      word-break: keep-all; 
+      /* 한글 단어 단위의 줄 바뀜 */
+    }
+  </style>
+</body>
+</html>
