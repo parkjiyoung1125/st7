@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform2-수직 수평 가운데 정렬</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{width: 100vw;
+      height: 100vh;
+      background-color: #ccc;
+      position: relative;
+    }
+    .center-box{
+      position: absolute;
+      left: 50%; top: 50%;
+      /* 자신의 위치에서 위치를 변경해라 */
+      transform: translate(-50%,-50%);
+      /* 일반흐름에서 제외 - 부모로부터 너비를 가져오지 않음 */
+      background-color: #68f;
+      padding: 1em 2em;
+      font-size: 25px;
+    }
+    .center-box .inner{
+      text-align: center;
+      background-color: #f86;
+    }
+    .center-box .inner p:first-child{
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="center-box">
+      <div class="inner">
+        <p>section-title</p>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
