@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transiton1 요소 밑에 밑줄 만들기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .sample1{
+      margin: 50px;
+      background-color: #ccc;
+    }
+    li{list-style: none;}
+    a:link,a:visited,a:hover{
+      text-decoration: none;
+      color: #000;
+    }
+    .box{}
+    .box ul{}
+    .box ul li{}
+    .box ul li a{
+      background-color: rgba(0,0,255,0.2);
+      padding: 0.5em 1.5em;
+      display: inline-block;
+      position: relative;
+      /* .box ul li a::after의 기준조상 */
+    }
+    .box ul li a::after{
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      display: block;
+      width: 100%;
+      background-color: #000;
+      height: 4px;
+      transform: scale(0);
+      transform-origin: 0 0;
+      /* 원크기에서 scale을 0으로 조정(크기가 없어짐) (1은 생김)*/
+    }
+
+    .box ul li:hover a::after{
+      transform: scale(1);
+      transition: all 1s;
+      background-color: rgba(255,0,0,0.5)
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <div class="sampel1 sample1">
+    <div class="box">
+      <ul>
+        <li><a href="">manu1</a></li>
+        <li><a href="">manu1</a></li>
+      </ul>
+  </div>
+  </div>
+</body>
+</html>
