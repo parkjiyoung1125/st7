@@ -55,17 +55,19 @@
     ec-base-product .prdlist .descirption{
       position: absolute;
       left: 0px; bottom: 0px;
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(255,0,0,0.5);
       width: 100%;
       /* 일반흐름에서 제외되었지만 기준 조상으로 너비를 가져온다. */
       padding: 1em;
       box-sizing: border-box;
+      transform: translate(0,100%);
+      transition: all 0.2s;
     }
-
-    ec-base-product .prdlist .descirption{
-      
+    ec-base-product .prdlist >li:hover .descirption{
+      transform: translate(0,0);
+      background-color: rgba(255,255,255,0.9);
+      transition: all 0.3s;
     }
-
   </style>
 
 </head>
