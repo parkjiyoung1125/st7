@@ -96,6 +96,16 @@ em {
   font-weight: normal;
 }
 
+/* 사용자 지정 속성, 변수선언, {--변수명:값;} */
+/* 선택자의 모든후손들은 변수를 전부 상속 사용 가능 */
+/* root는 최상위 부모 */
+/* 사용은 height:var(--변수명) */
+:root{
+  --header-height:80px;
+  --primary-color:#1ec545;
+  --primary-color-dark:#0fb93c;
+}
+/* 공통 */
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -159,4 +169,101 @@ header{
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: #ccc; */
+}
+
+.header_wrap nav{
+  height: var(--header-height);
+}
+
+nav .gnb_menu{
+  font-size: 0;
+  /* 인라인블럭으로 생긴 여백을 없애주기 위해서 */
+}
+nav .gnb_menu .gnb_menu_list, 
+nav .gnb_menu .gnb_menu_list_recruit{
+  /* li가 수평으로 나란히 오게 만들기 위해서 */
+  display: inline-block;
+}
+nav .gnb_menu .gnb_menu_list .gnb_menu_item
+/* ,nav .gnb_menu .gnb_menu_list_recruit */
+{
+  position: relative;
+  display: block;
+  font-size: 15px;
+  /* padding: 29px 0 30px; */
+  line-height: var(--header-height);
+  margin: 0 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* 메뉴에 마우스오버하면 메뉴 밑에 바 그리기 */
+/* nav .gnb_menu .gnb_menu_list .gnb_menu_item = 속성 지정하는 요소
+nav .gnb_menu .gnb_menu_list = 마우스오버 요소 */
+nav .gnb_menu .gnb_menu_list .gnb_menu_item::before{
+  content: '';
+  position: absolute;
+  left: 0; bottom: 1em;
+  display: block;
+  width: 100%; height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0); transition: transform 0.2s;
+  transform-origin: 100% 0;}
+  
+
+nav .gnb_menu .gnb_menu_list:hover .gnb_menu_item::before{
+  transform: scaleX(1); 
+  transition: transform 0.2s;
+  transform-origin: 0 0;
+}
+
+
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap{
+  /* depth2 d1 마우스 호버할 때 드랍다운되는 메뉴 */
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  display: none; /*테스토용 테스트 후  flex로 처리*/
+}
+
+nav .gnb_menu .gnb_menu_list:nth-child(1) ul.gnb_dropMenu_wrap{
+  display: block;
+  /* li요소를 수평으로 오게 만들기 위해서 */
+  display: flex;
+  /* flex-direction: row; 기본값 */
+  /* justify-content: flex-start; 기본값 */
+  /* align-items: stretch; 기본값 */
+  justify-content: center;
+}
+
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li{
+  font-size:14px;
+  width: 190px; 
+  height: 367px;
+  padding: 28px 0 0;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li:hover{
+background-color: var(--primary-color-dark);
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu{
+  padding-left: 2em;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .depth_blank{
+  margin: 14px;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu>li{
+  margin: 7px;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item{
+  color: #fff;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item strong span{
+  opacity: 1;
+  font-weight: bold;
+}
+
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item span{
+  opacity: 0.8;
 }
