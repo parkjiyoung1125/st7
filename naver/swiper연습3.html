@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper연습3</title>
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;} 
+    .wrap{
+      width: 1000px;
+      margin: 50px auto;
+      border: 1px solid #000;
+    }
+    .test1{
+      width: 100%;
+    }
+    .test1 .swiper-wrapper{}
+    .test1 .swiper-wrapper .swiper-slide{
+      border: 1px solid #f00;
+    }
+    .test1 .swiper-wrapper .swiper-slide img{
+      display: block;
+      width: 100%;
+      /* 무조건 부모의 너비를 따라라 */
+    }
+
+    /* 페이지네이션 색상 모양 변경 */
+    .test1 .swiper-pagination-bullet{
+      background-color: #fff;
+      opacity: 0.8;
+
+      border-radius: 0;
+      width: 8px;
+      height: 2px;
+    }
+    .test1 .swiper-pagination-bullet-active{
+      background-color: #f00;
+      opacity: 1;
+
+      width: 20px;
+    }
+
+    /* 화살표 색상변경 */
+    .test1 .swiper-button-next, .test1 .swiper-button-prev {color: #fff};
+
+      /* 스크롤바 변경 */
+      /* 스크롤전체크기 */
+      .test1 .swiper-scrollbar{
+        background-color: rgba(255,0,0,0.2);
+      }
+      /* 스크롤진행상태 */
+      .test1  .swiper-scrollbar-drag{
+        background-color: rgba(255,0,0,1);
+      }
+
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- Slider main container -->
+<div class="swiper test1">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"> <img src="asset/img/img_main_slide11.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="asset/img/img_main_slide12.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="asset/img/img_main_slide13.jpg" alt=""></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+  </div>
+
+  <script>
+    const test1 = new Swiper('.test1', {
+  // Optional parameters
+  direction: 'horizontal', 
+  // 수직 수평 중에 수평으로 선택
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+  </script>
+
+</body>
+</html>
