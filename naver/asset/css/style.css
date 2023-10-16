@@ -133,6 +133,26 @@ html {
   flex-direction: column;
 }
 
+.text_line,
+.text_line-rt,
+.text_line-rm{
+  display: block;
+}
+
+.text_block-rt,
+.text_block-rm{
+  display: inline;
+}
+
+@media (max-width:768px){
+  .text_line-rt{ display: inline !important; }
+  .text_block-rt{ display: block !important;  }
+}
+@media (max-width:576px){
+  .text_line-rm{display: inline !important;}
+  .text_block-rm{display: block !important;}
+}
+
 /* .item{
   background-color: rgba(0,0,255,0.5);
   border: 1px solid #000;
@@ -814,6 +834,18 @@ flex: none;
 width: 33.333%;
 overflow: hidden;
 }
+.content_service .service_list_container .service_thumbnail_box::after{
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%; 
+  background-color: #0e1442;
+  opacity: 0;
+  transition: all 0.1s;
+}
+.content_service .service_list_container .service_thumbnail_box:hover:after{
+  opacity: 0.8;
+  transition: all 0.3s;
+}
 .content_service .service_thumbnail_box .thumbnail{}
 .content_service .service_thumbnail_box .thumbnail a{
   display: block;
@@ -830,6 +862,8 @@ overflow: hidden;
   padding-left: 30px;
   padding-bottom: 2em;
   transition: transform 0.1s;
+  z-index: 20;
+  /* 상위레이어가 되기 위해서 */
 }
 .content_service .service_thumbnail_box:hover .description{
 transform: translateY(0);
@@ -851,3 +885,64 @@ transition: transform 0.3s;
   overflow:hidden;
   text-overflow: ellipsis;
 }
+
+@media (max-width:1024px) {
+  .content_service ul.service_list_container{
+    gap:20px;
+  }
+  .content_service ul.service_list_container li.service_thumbnail_box{
+    box-sizing: border-box;/*설정이되어 있어야지 2단이 정상으로 표시*/
+    width:calc(50% - 10px);
+    border: 1px solid #efefef;
+    box-shadow: 0 0 5px 2px rgba(204, 204, 204, 0.8);
+  }
+  .content_service ul.service_list_container li.service_thumbnail_box::after{
+    /* 오버레이표시하지 않기 위해*/
+    display: none;
+  }
+  .content_service .service_thumbnail_box .description{
+    /*일반흐름에 포함 li(부모) .description요소의 높이를 인식*/
+    position: static;
+    transform: translateY(0);
+    padding:1em;
+  }
+  .content_service .service_thumbnail_box .description dl{
+    color:#000;
+  }
+}
+
+@media (max-width:576px) {
+  .content_service ul.service_list_container{
+    gap:30px;
+  }
+  .content_service ul.service_list_container li.service_thumbnail_box{
+    width:100%;
+  }
+}
+
+.content_support{
+  padding-top: 120px;}
+.content_support .support_info_top{
+  text-align: center;
+}
+.content_support .support_info_top .support_title{
+font-size: 32px;
+font-weight: bold;
+margin-bottom: 0.8em;
+}
+.content_support .support_info_top .support_text{
+font-size: 18px;
+line-height: 1.6;
+}
+
+.content_support .support_list_container{
+  display: flex;
+}
+.content_support .support_list_box{
+  flex: none;
+  width: 25%;
+  border: 1px solid #000;
+}
+.content_support .support_list_box dl{}
+.content_support .support_list_box dd{}
+.content_support .support_list_box dt{}
