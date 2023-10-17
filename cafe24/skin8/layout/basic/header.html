@@ -1,0 +1,85 @@
+<div class="main_top_banner ez-align-left" data-ez-module="top-banner" data-ez-align="left" data-ez-role="style.color" data-ez-display="visible" data-ez="contents-0xok4lo-1">
+	<div class="top_banner_box_inner">
+		<div class="top_banner_text"><!-- 최상단 배너 수정하는곳 -->
+			<a data-ez-role="a" href="#" data-href="#" target="_self" style="color: black; font-weight: normal;">첫 쇼핑을 지원하는 5,000원 할인 회원가입 쿠폰</a>
+		</div><!-- //top_banner_text -->
+
+		<div class="top_banner_close" data-ez-role="close">
+			<input type="checkbox" name="chkbox" id="top_banner_box_cloase" value="1" data-ez-role="disable-term"><label for="top_banner_box_cloase" data-ez-role="disable-text">오늘 하루 보지 않기</label>
+			<i aria-hidden="true" class="icon icoClose">닫기</i>
+		</div><!-- //top_banner_close -->
+	</div><!-- //top_banner_box_inner -->
+</div>
+<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-0tyfg9e-1">
+	<ez-prop data-version="1.0.0">
+		<ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array">
+			<ez-item data-id="layout3" data-name="1단 기본형"></ez-item>
+			<ez-item data-id="layout2" data-name="2단 좌측형"></ez-item>
+			<ez-item data-id="layout4" data-name="2단 혼합형"></ez-item>
+			<ez-item data-id="layout1" data-name="2단 중앙형 (아이콘 하단)"></ez-item>
+			<ez-item data-id="layout5" data-name="2단 중앙형 (아이콘 상단)"></ez-item>
+  	    </ez-var>
+	</ez-prop>
+	<div class="inner">
+		<div class="toparea display_pc_only">
+			<div class="toparea_shoppinginfo">
+				<div module="Layout_multishopList">
+					<button type="button" class="toggle">{$current_language} <i aria-hidden="true" class="icon icoArrowBottom"></i></button>
+					<ul module="Layout_multishopListitem">
+						<li class="{$selected_class}">
+							<a href="//{$shop_domain}/">{$locale_language}</a>
+						</li>
+						<li class="{$selected_class}">
+							<a href="//{$shop_domain}/">{$locale_language}</a>
+						</li>
+					</ul>
+				</div>
+                <div data-ez-group="shopping-info" data-ez-role="list">
+				<ul module="Layout_shoppingInfo">
+					<li class="{$use_mileage|display}"><a href="/myshop/mileage/historyList.html">{$mileage_name} <strong>{$mileage}</strong></a></li>
+					<li class="{$use_deposit|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name} <strong>{$deposit}</strong></a></li>
+					<li class="{$use_coupon_cnt|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <strong>{$coupon_cnt}</strong></a></li>
+					<li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품 <strong>{$interest_prd_cnt}</strong></a></li>
+					<li class="{$use_like_product_cnt|display}">{$like_prd_tag}</li>
+					<li class="{$use_basket_cnt|display}"><a href="/order/basket.html">장바구니 <strong>{$basket_cnt}<span class="{$use_basket_price|display}">({$basket_price})</span></strong></a></li>
+				</ul>
+                </div>
+			</div><!-- //toparea_shoppinginfo -->
+
+			<div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+				<a data-ez-item="join" module="Layout_statelogoff" href="/member/agreement.html">회원가입</a>
+				<a data-ez-item="login" module="Layout_statelogoff" href="/member/login.html">로그인</a>
+				<a data-ez-item="modify" module="Layout_stateLogon" href="/member/modify.html">내정보수정</a>
+				<a data-ez-item="logout" module="Layout_stateLogon" href="{$action_logout}">로그아웃</a>
+				<a data-ez-item="order" href="/myshop/order/list.html">주문조회</a>
+				<a data-ez-item="mypage" module="Layout_stateLogon" href="/myshop/index.html">마이페이지</a>
+				<a data-ez-item="recent" href="/product/recent_view_product.html">최근본상품</a>
+				<div class="toparea_state_board">
+					<a data-ez-item="board" href="#none">고객센터 <i aria-hidden="true" class="icon icoArrowBottom"></i></a>
+					<ul module="Layout_BoardInfo">
+						<li><a href="{$link_board_list}">{$board_name}</a></li>
+						<li><a href="{$link_board_list}">{$board_name}</a></li>
+					</ul>
+				</div>
+			</div><!-- //toparea_state -->
+		</div><!-- //toparea -->
+
+		<div class="top_nav_box" id="top_nav_box">
+			<div class="top_logo" module="Layout_LogoTop"><a href="/">{$mall_name}</a></div><!-- //top_logo -->
+			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
+
+			<div data-ez-module="menu-main/1" data-ez-mode="manual">
+        <div class="xans-element- xans-layout xans-layout-category top_category">
+<ul><li><a href="/category/BEST/67/">BEST</a></li><li><a href="/category/NEW10/66/">NEW10%</a></li><li><a href="/category/HEEL/59/">HEEL</a><ul class="sub_cate01"><li><a href="/category/%ED%9E%90%ED%8E%8C%ED%94%84%EC%8A%A4/68/">힐/펌프스</a></li><li><a href="/category/%EC%8A%A4%ED%8B%B8%EB%A0%88%ED%86%A0/69/">스틸레토</a></li><li><a href="/category/%EB%A9%94%EB%A6%AC%EC%A0%9C%EC%9D%B8/70/">메리제인</a></li><li><a href="/category/%EC%8A%AC%EB%A7%81%EB%B0%B1/71/">슬링백</a></li></ul></li><li><a href="/category/FLAT/57/">FLAT</a><ul class="sub_cate01"><li><a href="/category/%ED%94%8C%EB%9E%AB/72/">플랫</a></li><li><a href="/category/%EB%A9%94%EB%A6%AC%EC%A0%9C%EC%9D%B8/73/">메리제인</a></li><li><a href="/category/%EC%8A%AC%EB%A7%81%EB%B0%B1/74/">슬링백</a></li></ul></li><li><a href="/category/LOAFER/60/">LOAFER</a><ul class="sub_cate01"><li><a href="/category/%EB%A1%9C%ED%8D%BC/75/">로퍼</a></li><li><a href="/category/%ED%8D%BC%EB%A1%9C%ED%8D%BC/76/">퍼로퍼</a></li></ul></li><li><a href="/category/BOOTS/61/">BOOTS</a><ul class="sub_cate01"><li><a href="/category/%EC%82%AD%EC%8A%A4%EB%B6%80%EC%B8%A0/77/">삭스부츠</a></li><li><a href="/category/%EC%95%B5%ED%81%B4%EB%B6%80%EC%B8%A0/78/">앵클부츠</a></li><li><a href="/category/%ED%95%98%ED%94%84%EB%B6%80%EC%B8%A0/79/">하프부츠</a></li><li><a href="/category/%EB%A1%B1%EB%B6%80%EC%B8%A0/80/">롱부츠</a></li><li><a href="/category/%EC%9B%8C%EC%BB%A4/82/">워커</a></li></ul></li><li><a href="/category/SANDAL/62/">SANDAL</a><ul class="sub_cate01"><li><a href="/category/%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%83%8C%EB%93%A4/83/">스트랩샌들</a></li><li><a href="/category/%EC%83%8C%EB%93%A4%ED%9E%90/84/">샌들힐</a></li><li><a href="/category/%EC%9B%A8%EC%A7%80%ED%86%B5%EA%B5%BD/85/">웨지/통굽</a></li><li><a href="/category/%EC%AA%BC%EB%A6%AC%EC%83%8C%EB%93%A4/86/">쪼리샌들</a></li></ul></li><li><a href="/category/SLIPPER/63/">SLIPPER</a><ul class="sub_cate01"><li><a href="/category/%EC%9D%BC%EB%B0%98%EC%8A%AC%EB%A6%AC%ED%8D%BC/87/">일반슬리퍼</a></li><li><a href="/category/%EC%AA%BC%EB%A6%AC%EC%8A%AC%EB%A6%AC%ED%8D%BC/88/">쪼리슬리퍼</a></li><li><a href="/category/%EB%AE%AC%EB%B8%94%EB%A1%9C%ED%8D%BC/89/">뮬/블로퍼</a></li><li><a href="/category/%ED%8D%BC%EC%8A%AC%EB%A6%AC%ED%8D%BC/90/">퍼슬리퍼</a></li></ul></li><li><a href="/category/SNEAKERS/64/">SNEAKERS</a><ul class="sub_cate01"><li><a href="/category/%EC%8A%A4%EB%8B%88%EC%BB%A4%EC%A6%88/91/">스니커즈</a></li><li><a href="/category/%EC%8A%AC%EB%A6%BD%EC%98%A8/92/">슬립온</a></li></ul></li><li><a href="/category/ACC/65/">ACC</a></li></ul>
+</div>
+      </div><!-- //menu-main/1 -->
+
+			<div class="top_mypage">
+				<a href="javascript:;" class="eSearch"><!--@import(/svg/icon-search.html)--></a>
+				<a href="/myshop/index.html"><!--@import(/svg/icon-user.html)--></a>
+				<a href="/order/basket.html" module="Layout_orderBasketcount"><!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+			</div><!-- //top_mypage -->
+		</div><!-- //top_nav_box -->
+	</div><!-- //inner -->
+</header>
+<!--#ez="1/22"-->
